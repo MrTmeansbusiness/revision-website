@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Question Bank Manager • IGCSE Economics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📚</text></svg>">
+</head>
+<body class="min-h-screen bg-emerald-50">
+  <div class="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 grid place-items-center rounded-md bg-emerald-600 text-white text-lg">E</div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold leading-tight">Question Bank (Manual Entry)</h1>
+          <p class="text-xs md:text-sm text-slate-600">Add questions manually to your custom bank</p>
+        </div>
+      </div>
+      <nav class="text-sm">
+        <a href="./website.html" class="text-emerald-700 hover:underline">← Back to app</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="max-w-3xl mx-auto px-4 py-6">
+    <div class="mb-4 inline-flex rounded-md border overflow-hidden">
+      <button type="button" class="px-4 py-2 text-sm font-medium bg-white hover:bg-slate-50" data-tab="manual">Manual entry</button>
+      <button type="button" class="px-4 py-2 text-sm font-medium bg-white hover:bg-slate-50 border-l" data-tab="pdf">Import from PDF</button>
+    </div>
+
+    <form id="qForm" class="bg-white border rounded-xl p-5 shadow-sm space-y-5" data-tabpanel="manual">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Section</label>
+          <select id="section" class="w-full border rounded px-2 py-2">
+            <option value="s1">Section 1: The basic economic problem</option>
+            <option value="s2">Section 2: The allocation of resources</option>
+            <option value="s3">Section 3: Microeconomic decision makers</option>
+            <option value="s4">Section 4: The government and the macroeconomy</option>
+            <option value="s5">Section 5: Economic development</option>
+            <option value="s6">Section 6: International trade and globalisation</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Topic (optional)</label>
+          <input id="topic" class="w-full border rounded px-2 py-2" placeholder="e.g. demand, elasticity, general">
+          <p class="text-xs text-slate-500 mt-1">If left blank, saved as "general".</p>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Question</label>
+        <textarea id="qText" class="w-full border rounded px-3 py-2" rows="4" placeholder="Enter the question text"></textarea>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Options (A–D)</label>
+        <div class="grid md:grid-cols-2 gap-2">
+          <input id="optA" class="border rounded px-3 py-2" placeholder="Option A">
+          <input id="optB" class="border rounded px-3 py-2" placeholder="Option B">
+          <input id="optC" class="border rounded px-3 py-2" placeholder="Option C">
+          <input id="optD" class="border rounded px-3 py-2" placeholder="Option D">
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Correct answer</label>
+          <select id="answer" class="w-full border rounded px-2 py-2">
+            <option value="0">A</option>
+            <option value="1">B</option>
+            <option value="2">C</option>
+            <option value="3">D</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Supporting image (optional)</label>
+          <input id="imageFile" type="file" accept="image/*">
+          <p class="text-xs text-slate-500 mt-1">Image will be embedded locally.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <button class="bg-emerald-600 text-white rounded-md px-4 py-2 font-semibold hover:bg-emerald-700" id="saveBtn">Add to bank</button>
+        <button type="button" class="rounded-md px-4 py-2 border" id="exportBtn">Export custom bank JSON</button>
+        <button type="button" class="rounded-md px-4 py-2 border" id="clearBtn">Clear custom bank</button>
+      </div>
+    </form>
+
+    <section class="mt-8 bg-white border rounded-xl p-5 shadow-sm" data-tabpanel="pdf" hidden>
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-semibold">Import from PDF</h2>
+        <div class="flex items-center gap-2 text-sm">
+          <input id="useOcr" type="checkbox" class="h-4 w-4">
+          <label for="useOcr" class="select-none">Use OCR fallback (for scanned PDFs)</label>
+          <span class="mx-2 text-slate-300">|</span>
+          <input id="imageOnly" type="checkbox" class="h-4 w-4">
+          <label for="imageOnly" class="select-none">Image-only (no text extraction)</label>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-3 items-start md:items-center">
+        <input id="pdfFile" type="file" accept="application/pdf" class="block">
+        <button id="parseBtn" class="bg-emerald-600 text-white rounded-md px-4 py-2 font-semibold hover:bg-emerald-700 disabled:opacity-60" disabled>Parse PDF</button>
+        <button id="saveParsedBtn" class="rounded-md px-4 py-2 border" disabled>Save parsed to custom bank</button>
+      </div>
+      <div class="mt-3" id="progressWrap" hidden>
+        <div class="h-2 w-full bg-slate-200 rounded">
+          <div id="progressBar" class="h-2 bg-emerald-600 rounded" style="width:0%"></div>
+        </div>
+        <div id="progressText" class="text-xs text-slate-600 mt-1">Preparing…</div>
+      </div>
+      <p class="text-xs text-slate-500 mt-2">The parser looks for numbered MCQs and options A–D. You can edit below before saving.</p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr class="text-left text-slate-600">
+              <th class="p-2 w-8"><input id="selectAllParsed" type="checkbox"></th>
+              <th class="p-2">#</th>
+              <th class="p-2">Question</th>
+              <th class="p-2">Section</th>
+              <th class="p-2">Topic</th>
+              <th class="p-2">Choices</th>
+              <th class="p-2">Answer</th>
+              <th class="p-2">Image</th>
+            </tr>
+          </thead>
+          <tbody id="questionsTbody" class="align-top"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-semibold">Your custom questions</h2>
+        <button type="button" id="exportBtn2" class="text-sm text-emerald-700 hover:underline">Export JSON</button>
+      </div>
+      <div id="qList" class="space-y-3"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.3/dist/tesseract.min.js"></script>
+  <script src="./questions.js"></script>
+  <script src="./bank.js"></script>
+</body>
+</html>
