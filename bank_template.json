@@ -84,6 +84,10 @@
       {
         "id": "Workers",
         "name": "Workers"
+      },
+      {
+        "id": "Firm's costs, revenue and objectives",
+        "name": "Firm's costs, revenue and objectives"
       }
     ],
     "questions": [
@@ -119,6 +123,17 @@
           "Hospital cleaners have a more inelastic demand than doctors."
         ],
         "answer": 0
+      },
+      {
+        "topic": "Firm's costs, revenue and objectives",
+        "text": "When is profit maximisation achieved?",
+        "choices": [
+          "when average fixed cost is at a minimum",
+          "when average revenue is at a maximum",
+          "when the firm produces the largest output it can with the resources it has available",
+          "when there is the greatest possible difference between total revenue and total cost"
+        ],
+        "answer": 3
       }
     ]
   }
