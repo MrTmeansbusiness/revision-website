@@ -166,5 +166,26 @@
         "answer": 1
       }
     ]
+  },
+  "s4": {
+    "topics": [
+      {
+        "id": "Fiscal policy",
+        "name": "Fiscal policy"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "Fiscal policy",
+        "text": "What is most likely to cause a more even distribution of income?",
+        "choices": [
+          "an increase in indirect taxation",
+          "an increase in inflation",
+          "an increase in managers’ salaries",
+          "an increase in progressive taxation"
+        ],
+        "answer": 3
+      }
+    ]
   }
 }
