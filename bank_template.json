@@ -172,6 +172,10 @@
       {
         "id": "Fiscal policy",
         "name": "Fiscal policy"
+      },
+      {
+        "id": "Monetary policy",
+        "name": "Monetary policy"
       }
     ],
     "questions": [
@@ -185,6 +189,17 @@
           "an increase in progressive taxation"
         ],
         "answer": 3
+      },
+      {
+        "topic": "Monetary policy",
+        "text": "What is a monetary policy measure?",
+        "choices": [
+          "increasing interest rates",
+          "increasing taxation",
+          "reducing the power of trade unions",
+          "selling state-owned enterprises"
+        ],
+        "answer": 0
       }
     ]
   }
