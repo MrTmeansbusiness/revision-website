@@ -70,5 +70,26 @@
         "answer": 3
       }
     ]
+  },
+  "s3": {
+    "topics": [
+      {
+        "id": "Trade unions",
+        "name": "Trade unions"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "Trade unions",
+        "text": "What is a trade union?",
+        "choices": [
+          "a business organisation in which all workers share ownership",
+          "an area where there are no barriers to trade",
+          "an organisation of employers from an industry",
+          "an organisation that represents the interests of workers"
+        ],
+        "answer": 3
+      }
+    ]
   }
 }
