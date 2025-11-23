@@ -25,6 +25,10 @@
       {
         "id": "Microeconomics and macroeconomics",
         "name": "Microeconomics and macroeconomics"
+      },
+      {
+        "id": "The role of markets in allocating resources",
+        "name": "The role of markets in allocating resources"
       }
     ],
     "questions": [
@@ -38,6 +42,17 @@
           "The profits of railway operators would fall."
         ],
         "answer": 0
+      },
+      {
+        "topic": "The role of markets in allocating resources",
+        "text": "What necessarily describes the market system?",
+        "choices": [
+          "an economy with both a private and public sector",
+          "limited resources but unlimited wants",
+          "resources are allocated through demand and supply",
+          "when all resources are used to produce consumer goods"
+        ],
+        "answer": 2
       }
     ]
   }
