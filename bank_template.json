@@ -88,6 +88,10 @@
       {
         "id": "Firm's costs, revenue and objectives",
         "name": "Firm's costs, revenue and objectives"
+      },
+      {
+        "id": "Market structure",
+        "name": "Market structure"
       }
     ],
     "questions": [
@@ -134,6 +138,17 @@
           "when there is the greatest possible difference between total revenue and total cost"
         ],
         "answer": 3
+      },
+      {
+        "topic": "Market structure",
+        "text": "In some industries, a monopoly controls output and prices. \nWhat is the most likely impact of this on consumers?",
+        "choices": [
+          "higher prices",
+          "higher profits",
+          "higher taxes",
+          "more choice"
+        ],
+        "answer": 0
       }
     ]
   }
