@@ -176,6 +176,10 @@
       {
         "id": "Monetary policy",
         "name": "Monetary policy"
+      },
+      {
+        "id": "Supply-side policy",
+        "name": "Supply-side policy"
       }
     ],
     "questions": [
@@ -198,6 +202,17 @@
           "increasing taxation",
           "reducing the power of trade unions",
           "selling state-owned enterprises"
+        ],
+        "answer": 0
+      },
+      {
+        "topic": "Supply-side policy",
+        "text": "Why does more emphasis on education and training lead to an increase in national output?",
+        "choices": [
+          "It improves the productivity of the labour force.",
+          "It lowers the inputs of capital investment.",
+          "It reduces demands for higher pay.",
+          "It reduces the power of trade unions."
         ],
         "answer": 0
       }
