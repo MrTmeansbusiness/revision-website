@@ -76,6 +76,10 @@
       {
         "id": "Trade unions",
         "name": "Trade unions"
+      },
+      {
+        "id": "Money and banking",
+        "name": "Money and banking"
       }
     ],
     "questions": [
@@ -89,6 +93,17 @@
           "an organisation that represents the interests of workers"
         ],
         "answer": 3
+      },
+      {
+        "topic": "Money and banking",
+        "text": "What is the most important characteristic of money?",
+        "choices": [
+          "It has intrinsic value.",
+          "It is generally acceptable",
+          "It is portable.",
+          "It is readily available."
+        ],
+        "answer": 1
       }
     ]
   }
