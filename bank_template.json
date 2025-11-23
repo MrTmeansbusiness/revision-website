@@ -29,6 +29,10 @@
       {
         "id": "The role of markets in allocating resources",
         "name": "The role of markets in allocating resources"
+      },
+      {
+        "id": "Supply",
+        "name": "Supply"
       }
     ],
     "questions": [
@@ -53,6 +57,17 @@
           "when all resources are used to produce consumer goods"
         ],
         "answer": 2
+      },
+      {
+        "topic": "Supply",
+        "text": "What is not held constant when constructing the supply curve of a firm?",
+        "choices": [
+          "indirect taxes and subsidies on the firm’s products",
+          "the level of technology used by the firm in production",
+          "the price of the factors of production paid for by the firm",
+          "the market price of the good produced by the firm"
+        ],
+        "answer": 3
       }
     ]
   }
