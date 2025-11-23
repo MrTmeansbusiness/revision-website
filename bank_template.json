@@ -92,6 +92,10 @@
       {
         "id": "Market structure",
         "name": "Market structure"
+      },
+      {
+        "id": "Firms",
+        "name": "Firms"
       }
     ],
     "questions": [
@@ -149,6 +153,17 @@
           "more choice"
         ],
         "answer": 0
+      },
+      {
+        "topic": "Firms",
+        "text": "A mining company bought another mining company. \nHow may this integration be described?",
+        "choices": [
+          "diversification",
+          "horizontal merger",
+          "specialisation",
+          "vertical merger"
+        ],
+        "answer": 1
       }
     ]
   }
