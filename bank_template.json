@@ -1,1 +1,23 @@
-{}
+{
+  "s1": {
+    "topics": [
+      {
+        "id": "The factors of production",
+        "name": "The factors of production"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "The factors of production",
+        "text": "What is not a factor of production?",
+        "choices": [
+          "a $20 banknote",
+          "an office",
+          "a photocopier",
+          "a secretary"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
