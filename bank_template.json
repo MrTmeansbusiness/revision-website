@@ -19,5 +19,26 @@
         "answer": 0
       }
     ]
+  },
+  "s2": {
+    "topics": [
+      {
+        "id": "Microeconomics and macroeconomics",
+        "name": "Microeconomics and macroeconomics"
+      }
+    ],
+    "questions": [
+      {
+        "topic": "Microeconomics and macroeconomics",
+        "text": "A country experiences a long strike by railway workers. \nWhat would be the macroeconomic impact of such a strike?",
+        "choices": [
+          "National output would fall.",
+          "Railway workers would lose income.",
+          "The demand for taxi services would rise.",
+          "The profits of railway operators would fall."
+        ],
+        "answer": 0
+      }
+    ]
   }
 }
