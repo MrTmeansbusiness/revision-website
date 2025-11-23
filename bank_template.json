@@ -80,6 +80,10 @@
       {
         "id": "Money and banking",
         "name": "Money and banking"
+      },
+      {
+        "id": "Workers",
+        "name": "Workers"
       }
     ],
     "questions": [
@@ -104,6 +108,17 @@
           "It is readily available."
         ],
         "answer": 1
+      },
+      {
+        "topic": "Workers",
+        "text": "Which statement explains why the pay of doctors is usually higher than the pay of hospital\ncleaners?",
+        "choices": [
+          "Doctors have a higher opportunity cost in qualifying.",
+          "Doctors have a more elastic supply than hospital cleaners.",
+          "Hospital cleaners belong to trade unions with stronger bargaining powers.",
+          "Hospital cleaners have a more inelastic demand than doctors."
+        ],
+        "answer": 0
       }
     ]
   }
